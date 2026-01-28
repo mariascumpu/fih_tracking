@@ -12,7 +12,7 @@ def main():
     source = sys.argv[2]
 
     model = YOLO(weights)
-    results = model.predict(source=source, save=True, conf=0.25)
+    results = model.predict(source=source, save=True, conf=0.15, iou=0.5)
 
     print("Done. Look in runs/detect/ for outputs.")
     print(f"Predicted on: {source}")
