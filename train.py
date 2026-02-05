@@ -12,9 +12,12 @@ def main():
     results = model.train(
         data=str(DATA_YAML),
         epochs=30,
-        imgsz=640,
+        imgsz=960,
         batch=16,
         patience=20,
+        vid_stride=1,  #### start
+        iou=0.5,
+        conf=0.05,      #### finish
         project="runs",          # will create ./runs/detect/...
         name="fish_yolov8n_v1",
         device="cpu",
